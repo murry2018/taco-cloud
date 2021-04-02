@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Summary</title>
+  </head>
+  <body>
+    <h1 th:text="${title}"></h1>
+    <h2 th:each="item : ${items}" th:text="${item}"></h2>
+  </body>
+</html>

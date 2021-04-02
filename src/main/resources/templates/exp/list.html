@@ -1,0 +1,21 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <body>
+    <form method="POST" th:action="@{/exp/write}" th:object="${article}">
+      <input type="text" th:field="*{author.name}" />
+      <b th:if="${#fields.hasErrors('author.name')}"
+         th:errors="*{author.name}" />
+      <br />
+      <textarea th:field="*{content}" />
+      <b th:if="${#fields.hasErrors('content')}" th:errors="*{content}" />
+      <br />
+      <input type="submit"/>
+    </form>
+    <div th:each="item: ${items}">
+      <div style="margin-top:1em; border-left:3px solid black; padding-left: 1em"
+           th:object="${item}">
+        <div style="display: inline" th:text="*{content} + ' -' + *{author.name}" />
+      </div>
+    </div>
+  </body>
+</html>
