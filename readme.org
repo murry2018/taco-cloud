@@ -1,3 +1,12 @@
 * Taco cloud
 
 Stuyding with Spring in action 5/E.
+
+** How to start?
+
+This project doesn't contain maven wrapper. Instead you can use
+globally installed maven executable.
+
+#+begin_src shell
+  mvn spring-boot:run
+#+end_src
